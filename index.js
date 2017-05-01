@@ -16,7 +16,16 @@ let params = {};
 // 		console.log(data);
 // 	})
 
-client.get('event', params)
+client.get('user/me', params)
 	.then((data) =>{
 		console.log(data);
+	}, (err) => {
+		console.log(err);
+	})
+
+client.get('event', {})
+	.then((data) =>{
+		console.log(data);
+	}, (err) => {
+		console.log(err);
 	})
